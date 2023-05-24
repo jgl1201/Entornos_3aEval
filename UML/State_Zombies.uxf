@@ -1,0 +1,48 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLState</id><coordinates><x>270</x><y>130</y><w>220</w><h>110</h></coordinates><panel_attributes>Humano
+--
+entry: existes
+exit:
+do: sobrevivir
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>700</x><y>130</y><w>180</w><h>110</h></coordinates><panel_attributes>Muerto
+--
+entry: muerte
+exit:
+do: descansar en paz
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>150</y><w>240</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+ataque humano</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>560</x><y>360</y><w>200</w><h>110</h></coordinates><panel_attributes>Infectado
+--
+entry: Virus / mordisco
+exit:
+do: buscar ayuda
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>840</x><y>370</y><w>200</w><h>110</h></coordinates><panel_attributes>Zombie
+--
+entry: Buscar victimas
+exit:
+do: Morder a los humanos
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>270</x><y>400</y><w>200</w><h>110</h></coordinates><panel_attributes>Inmune
+--
+entry: Ayudar a los no inmunes
+exit:
+do: Investigar y ayudar
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>230</y><w>80</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
+vacunado</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>220</y><w>230</w><h>160</h></coordinates><panel_attributes>lt=-&gt;
+virus</panel_attributes><additional_attributes>10;20;210;20;210;140</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>230</y><w>150</w><h>150</h></coordinates><panel_attributes>lt=-&gt;
+mordido</panel_attributes><additional_attributes>10;10;10;130;130;130</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>460</y><w>320</w><h>120</h></coordinates><panel_attributes>lt=-&gt;
+vacunado / salvado</panel_attributes><additional_attributes>300;10;300;100;10;100;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>460</y><w>320</w><h>140</h></coordinates><panel_attributes>lt=-&gt;
+no vacunado / no salvado</panel_attributes><additional_attributes>10;10;10;120;300;120;300;20</additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>230</y><w>60</w><h>160</h></coordinates><panel_attributes>lt=-&gt;
+fuego</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element></diagram>

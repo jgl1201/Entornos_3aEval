@@ -1,0 +1,13 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLHierarchy</id><coordinates><x>250</x><y>40</y><w>400</w><h>450</h></coordinates><panel_attributes>type=Package
+main/java/com/cebem
+	RickAndMorty
+		controllers
+		services
+		models
+		repositories
+		utils
+	resources
+		templates
+		static</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>220</x><y>520</y><w>100</w><h>70</h></coordinates><panel_attributes>Controllers</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>400</x><y>520</y><w>100</w><h>70</h></coordinates><panel_attributes>Services</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>580</x><y>520</y><w>100</w><h>70</h></coordinates><panel_attributes>Repositories</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>540</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;access&gt;&gt;</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>540</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;access&gt;&gt;</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element></diagram>

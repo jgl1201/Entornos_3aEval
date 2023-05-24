@@ -1,0 +1,79 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>140</x><y>60</y><w>310</w><h>320</h></coordinates><panel_attributes>Raquet
+--
+
+#xPosition: number
+#yPosition: number = height / 2
+#xSize: integer = 10
+#ySize: integer = 60
+-ySpeed: number = 0
+-color: Color = white
+_#WALL_SEPARATION: integer = 50 {readonly}_
++points: integer = 0
+
+--
+
++constructor(): void
++draw(): void
++updatePosition(): void
++limitOutScreen(): boolean
++moveUp(): void
++moveDown(): void
++stop(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>20</y><w>340</w><h>360</h></coordinates><panel_attributes>Ball
+--
+
+-xPosition: number = width / 2
+-yPosition: number = height / 2
+-side: integer = 10
+-xSpeed: number = 3
+-ySpeed: number = 3
+-color: Color = white
+
+--
+
++constructor(): void
++draw(): void
++updatePosition(): void
+-hasColisionLeftWall(): boolean
+-hasColisionRightWall(): boolean
+-hasColisionTopWall(): boolean
+-hasColisionBottomWall(): boolean
++controllColisionTopBottomWall(): void
++controlColisionLeftWall(): boolean
++controlColisionRightWall(): boolean
++controlColisionLeftRaquet(): void
++controlColisionRightRaquet(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>490</y><w>360</w><h>320</h></coordinates><panel_attributes>Scenary
+--
+
++height: 480
++width: 640
++ball: Ball
++LeftRaquet: Raquet
++RightRaquet: Raquet
+
+--
+
++constructor(): void
++setUp(): void
++draw(): void
++keyPressed(): void
++keyRealesed(): void
++reset(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>990</x><y>70</y><w>170</w><h>130</h></coordinates><panel_attributes>Note..
+bg=blue
+--
+width es  el ancho total
+	de la pantalla
+height el el alto total
+	de la pantalla
+side el lado de la bola
+	(cuadrado)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>10</y><w>100</w><h>80</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>80;60;80;30;40;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>490</y><w>310</w><h>100</h></coordinates><panel_attributes>LeftRaquet
+--
+
+--
+
++constructor(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>490</y><w>310</w><h>100</h></coordinates><panel_attributes>RightRaquet
+--
+
+--
+
++constructor(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>370</y><w>90</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;65;74;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>440</y><w>150</w><h>70</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;130;50</additional_attributes></element></diagram>
