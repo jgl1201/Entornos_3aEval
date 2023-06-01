@@ -1,0 +1,95 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLState</id><coordinates><x>230</x><y>90</y><w>180</w><h>110</h></coordinates><panel_attributes>Artículo
+--
+entry: se pone a la venta
+do: estar a la venta
+exit: se compra el artículo
+
+-.
+
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>120</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+pago directo</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>570</x><y>90</y><w>180</w><h>110</h></coordinates><panel_attributes>A. Vendido
+--
+entry: artículo comprado
+do: pertenecer al comprador
+exit: romperse / basura
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>230</x><y>270</y><w>180</w><h>90</h></coordinates><panel_attributes>A. Cesta de Compra
+--
+entry: se añade al carro
+do: esperar a ser pagado
+exit: finalización de la compra
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>190</y><w>120</w><h>100</h></coordinates><panel_attributes>lt=-&gt;
+añadir a la cesta</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>190</y><w>230</w><h>130</h></coordinates><panel_attributes>lt=-&gt;
+trámite del pago</panel_attributes><additional_attributes>10;110;210;110;210;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>340</y><w>240</w><h>110</h></coordinates><panel_attributes>A. Preparado
+--
+entry: finalización del pago
+do:  envío de mail al cliente con la factura
+        esperar a ser enviado
+exit: comienzo del envío
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>190</y><w>110</w><h>170</h></coordinates><panel_attributes>lt=-&gt;
+pago correcto</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLState</id><coordinates><x>570</x><y>510</y><w>210</w><h>110</h></coordinates><panel_attributes>A. en Envío
+--
+entry: comienzo del envío
+do:  envío de mail al cliente +
+        ser transportado
+exit: dejado del artículo
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>440</y><w>130</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+se llena el vehículo
+de reparto</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLState</id><coordinates><x>280</x><y>440</y><w>180</w><h>110</h></coordinates><panel_attributes>A. Entregado
+--
+entry: recepción del artículo
+do: pertenecer al comprador
+exit: devolución / rotura
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>570</x><y>670</y><w>210</w><h>110</h></coordinates><panel_attributes>A. Perdido
+--
+entry: evento no esperado
+do: reembolso del dinero +
+       explicación al cliente
+exit: (no hay)
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>610</y><w>130</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+accidente terrible</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>480</y><w>190</w><h>110</h></coordinates><panel_attributes>lt=-&gt;
+llegada al punto de recogida</panel_attributes><additional_attributes>120;90;110;20;10;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>280</x><y>600</y><w>180</w><h>110</h></coordinates><panel_attributes>A. Devuelto
+--
+entry: devolución del artículo
+do: comprobar devolución
+exit: llegada al punto inicial
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>540</y><w>170</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+insatisfacción del cliente</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>390</y><w>390</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+arrepentimiento de la compra</panel_attributes><additional_attributes>370;20;10;20;10;70</additional_attributes></element><element><id>UMLState</id><coordinates><x>70</x><y>460</y><w>200</w><h>160</h></coordinates><panel_attributes>Devolución
+--
+Artículo devuelto antes 
+del envío
+
+entry: cancelación del envío
+do: reembolso del pago
+exit: atículo nuevamente en venta
+
+-.
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>610</y><w>210</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+devolución correcta</panel_attributes><additional_attributes>10;10;10;50;190;50</additional_attributes></element><element><id>Relation</id><coordinates><x>10</x><y>140</y><w>380</w><h>620</h></coordinates><panel_attributes>lt=-&gt;
+nueva
+puesta
+en
+venta</panel_attributes><additional_attributes>360;570;360;600;10;600;10;10;220;10</additional_attributes></element></diagram>
